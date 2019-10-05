@@ -1,0 +1,36 @@
+<div class="container">
+    <br />
+    <div class="row">
+        <div class="col-4">
+            <button type="button" class="btn btn-success">Gerar Token</button>
+        </div>
+        <div class="col-8">
+            <span class="font-weight-bold">Token:</span> 000-00000000-00000
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-4">
+            <button type="button" class="btn btn-primary" (click)="getAllProducts()">Listar Produtos</button>
+        </div>
+    </div>
+    <br />
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Descrição</th>               
+                <th scope="col">Preço(R$)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of products">
+                <th scope="row">{{ product.id }}</th>
+                <td>{{ product.nome }}</td>
+                <td>{{ product.descricao }}</td>
+                <td>{{ product.valor }}</td>                
+            </tr>            
+        </tbody>
+    </table>
+</div>
